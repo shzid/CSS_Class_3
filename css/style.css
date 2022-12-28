@@ -1,0 +1,84 @@
+/* Browser Resetting */
+*{
+    box-sizing: border-box;
+    margin: o;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+nav{
+    width: 60%;
+    color: purple;
+    text-align: center;
+    margin: auto;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+nav h4{
+    text-align: center;
+    padding-top: 20px;
+}
+a{
+    text-decoration: none;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: rgb(27, 204, 180);
+    padding: 20px;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+}
+nav ul li:hover > a{
+    color: rgb(13, 146, 84);
+}
+nav ul li a::before{
+    transition: 0.5s;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: rgba(99, 207, 78, 0.61);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+nav ul li:hover > a::before{
+    width: 100%;
+}
+/* Drop Down Menu */
+nav ul li ul{
+    border-top: 4px solid rgb(201, 0, 0);
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(216, 219, 13);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 5px;
+    transition: 0.5s;
+    width: auto;
+    text-align: center;
+}
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+nav ul li ul li{
+    display: block;
+    border-bottom: 1px solid orange;
+}
+nav ul li ul li ul{
+    left: 100%;
+    top: 0;
+    width: 200px;
+}
+nav ul li ul li:last-child{
+    border: none;
+}
